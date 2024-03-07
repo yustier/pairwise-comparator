@@ -1,0 +1,165 @@
+h1, h2 {
+    text-align: center;
+}
+
+.mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.config {
+    display: none;
+    border: #000 2px solid;
+    margin: 20px;
+}
+
+.file-config {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.drop-zone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    padding: 0 20px;
+    border: 2px dashed #000;
+}
+
+#json-text {
+    display: block;
+    width: auto;
+    height: 100px;
+    margin: 0 20px;
+    resize: vertical;
+}
+
+.remaining-text {
+    text-align: center;
+    font-size: 150%;
+}
+
+.remaining {
+    font-size: 200%;
+    font-family: 'Consolas';
+}
+
+.compare {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.compare>span {
+    margin: 0 10px;
+}
+
+button {
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 300px;
+    height: 100px;
+}
+
+button:enabled:hover {
+    filter: brightness(150%);
+}
+
+button:enabled:active {
+    filter: brightness(70%);
+}
+
+.button-e {
+    background-color: #f44336;
+    color: white;
+}
+
+.button-w {
+    background-color: #2196F3;
+    color: white;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: default;
+}
+
+.name {
+    font-size: 150%;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 0 4px;
+}
+
+table.academic {
+    border-bottom: 2px solid #000;
+}
+
+table.academic>thead {
+    border-bottom: 3px double #000;
+}
+
+table.academic>tbody>tr {
+    border-bottom: 1px solid #000;
+}
+
+.rank>tbody>tr>td {
+    text-align: right;
+}
+
+.rank>tbody>tr>td:nth-of-type(n+3) {
+    text-align: center;
+}
+
+.league-desc {
+    text-align: center;
+}
+
+.league {
+    text-align: center;
+    border: 2px solid #000;
+}
+
+.league * {
+    border: 1px solid #000;
+}
+
+.league>thead {
+    border-bottom: 3px double #000;
+}
+
+.league>tbody>tr>th, .league>thead>tr>th:first-child {
+    border-right: 3px double #000;
+    white-space: nowrap;
+}
+
+.league>thead>tr>th:nth-of-type(n+2) {
+    writing-mode: vertical-rl;
+    padding: 4px 0;
+}
+
+.league>tbody>tr>td {
+    padding: 0;
+}
+
+.history {
+    text-align: center;
+}

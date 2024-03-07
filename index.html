@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一対比較法</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>一対比較法</h1>
+
+    <div class="mode">
+        <form name="mode">
+            <input type="radio" id="main" name="modeBtn" value="main" checked>
+            <label for="main">メイン</label>
+            <input type="radio" id="config" name="modeBtn" value="config">
+            <label for="config">設定</label>
+        </form>
+    </div>
+
+    <div class="config">
+        <h2>設定</h2>
+        <div class="file-config">
+            <!-- <div class="drop-zone">
+                <input type="file" id="file" accept=".json">
+                <p><label for="file">JSONファイルを選択する</label>か、ドラッグアンドドロップしてください</p>
+            </div> -->
+            <textarea id="json-text">{
+    "title": "一対比較法で\n順位を決めるツール",
+    "matchType": "戦",
+    "scoreType": "勝ち星",
+    "candidateType": "力士",
+    "version": "2024-3-7",
+    "candidates": [
+        {
+            "name": "ほげの海",
+            "description": "2行目",
+            "remark": "3行目"
+        },
+        {
+            "name": "ふがの花",
+            "description": "2行目",
+            "remark": "3行目"
+        },
+        {
+            "name": "ぴよの富士",
+            "description": "2行目",
+            "remark": "3行目"
+        }
+    ]
+}</textarea>
+        </div>
+    </div>
+
+    <div class="main">
+        <p class="remaining-text">あと: <code class="remaining">0</code> <span class="match-type">番</span></p>
+        <div class="compare">
+            <button class="button-e" disabled>
+                <span class="name">ほげの海</span><br>
+                <span class="description">JavaScriptを</span><br>
+                <span class="remark">有効にしてください</span>
+            </button>
+            <span>vs.</span>
+            <button class="button-w" disabled>
+                <span class="name">ふがの花</span><br>
+                <span class="description">JavaScriptを</span><br>
+                <span class="remark">有効にしてください</span>
+            </button>
+        </div>
+
+        <h2>ランキング</h2>
+        <table class="academic rank">
+            <thead>
+                <tr>
+                    <th>順位</th>
+                    <th class="score-type">勝利数</th>
+                    <th class="candidate-type">選手</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>ほげの海</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>ふがの花</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>ぴよの富士</td>
+                </tr>
+        </table>
+
+        <h2>対戦表</h2>
+        <p class="league-desc">左が勝ったら○、上が勝ったら●</p>
+        <div class="table-wrap">
+            <table class="league">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>ほげの海</th>
+                        <th>ふがの花</th>
+                        <th>ぴよの富士</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>ほげの海</th>
+                        <td>-</td>
+                        <td>○</td>
+                        <td>○</td>
+                    </tr>
+                    <tr>
+                        <th>ふがの花</th>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>○</td>
+                    </tr>
+                    <tr>
+                        <th>ぴよの富士</th>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+            </table>
+        </div>
+
+        <h2>対戦結果</h2>
+        <table class="academic history">
+            <thead>
+                <tr>
+                    <th colspan="2">東</th>
+                    <th colspan="2">西</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ぴよの富士</td>
+                    <td>●</td>
+                    <td>○</td>
+                    <td>ふがの花</td>
+                </tr>
+                <tr>
+                    <td>ほげの海</td>
+                    <td>○</td>
+                    <td>●</td>
+                    <td>ぴよの富士</td>
+                </tr>
+                <tr>
+                    <td>ほげの海</td>
+                    <td>○</td>
+                    <td>●</td>
+                    <td>ふがの花</td>
+                </tr>
+        </table>
+    </div>
+
+    <hr>
+    <div id="footer">
+        ©2024 <a href="https://i6c.at">Airoku</a><br>
+        <a href="https://github.com/yustier/pairwise-comparator">Source</a>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
