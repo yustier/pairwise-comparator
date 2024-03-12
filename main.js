@@ -91,7 +91,8 @@ function vote(match, hasEastWon) {
 }
 
 function init() {
-    document.querySelector('h1').innerHTML = list.title.split('\n').join('<br>')
+    document.querySelector('h1').innerText = list.title
+    document.querySelector('title').textContent = list.title.split('\n').join('')
     document.querySelector('.match-type').textContent = list.matchType
     document.querySelector('.score-type').textContent = list.scoreType
     document.querySelector('.candidate-type').textContent = list.candidateType
