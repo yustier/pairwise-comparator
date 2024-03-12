@@ -164,3 +164,15 @@ table.academic>tbody>tr {
 .history {
     text-align: center;
 }
+
+@media print {
+    .compare {
+        display: none;
+    }
+    h2, .league-desc {
+        break-after: avoid;
+    }
+    .league {
+        break-inside: avoid;
+    }
+}
