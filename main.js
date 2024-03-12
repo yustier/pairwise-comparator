@@ -133,9 +133,6 @@ function init() {
     btnE.removeAttribute('disabled')
     btnW.removeAttribute('disabled')
 
-    btnE.addEventListener('click', () => vote(match, true))
-    btnW.addEventListener('click', () => vote(match, false))
-
     loadNewMatch()
 }
 
@@ -192,6 +189,9 @@ document.mode.addEventListener('change', () => {
         document.querySelector('.config').style.display = 'block'
     }
 })
+
+btnE.addEventListener('click', () => vote(match, true))
+btnW.addEventListener('click', () => vote(match, false))
 
 list = JSON.parse(textInput.value)
 init()
