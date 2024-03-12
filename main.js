@@ -10,11 +10,32 @@ const remaining = document.querySelector('.remaining')
 const league = document.querySelector('.league')
 const matchHistory = document.querySelector('.history>tbody')
 
-function writeRanking() {
+function writeRanking(method = 'competition') {
     const sortedScores = Object.entries(scores).sort((a, b) => b[1] - a[1])
     let ranking = ''
+    let lastScore = null
+    let rank = 0
     for (const [index, [name, score]] of sortedScores.entries()) {
-        ranking += `<tr><td>${index + 1}</td><td>${score}</td><td>${name}</td></tr>`
+        switch (method) {
+            case 'competition':
+            case '1224':
+                if (score !== lastScore) {
+                    rank = index + 1
+                }
+                break
+            case 'dense':
+            case '1223':
+                if (score !== lastScore) {
+                    rank++
+                }
+                break
+            case 'ordinal':
+            case '1234':
+                rank = index + 1
+                break
+        }
+        ranking += `<tr><td>${rank}</td><td>${score}</td><td>${name}</td></tr>`
+        lastScore = score
     }
     document.querySelector('.rank>tbody').innerHTML = ranking
 }
