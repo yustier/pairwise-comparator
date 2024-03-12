@@ -10,6 +10,7 @@ h1, h2 {
 
 .config {
     display: none;
+    text-align: center;
     border: #000 2px solid;
     margin: 20px;
 }
@@ -34,7 +35,7 @@ h1, h2 {
 #json-text {
     display: block;
     width: auto;
-    height: 100px;
+    height: 250px;
     margin: 0 20px;
     resize: vertical;
 }
