@@ -1,3 +1,7 @@
+:root {
+    color-scheme: light dark;
+}
+
 h1, h2 {
     text-align: center;
 }
@@ -11,7 +15,7 @@ h1, h2 {
 .config {
     display: none;
     text-align: center;
-    border: #000 2px solid;
+    border: 2px solid;
     margin: 20px;
 }
 
@@ -29,7 +33,7 @@ h1, h2 {
     align-items: center;
     margin: 0 20px;
     padding: 0 20px;
-    border: 2px dashed #000;
+    border: 2px dashed;
 }
 
 #json-text {
@@ -111,15 +115,15 @@ table th, table td {
 }
 
 table.academic {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid;
 }
 
 table.academic>thead {
-    border-bottom: 3px double #000;
+    border-bottom: 3px double;
 }
 
 table.academic>tbody>tr {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid;
 }
 
 .rank>tbody>tr>td {
@@ -136,19 +140,19 @@ table.academic>tbody>tr {
 
 .league {
     text-align: center;
-    border: 2px solid #000;
+    border: 2px solid;
 }
 
 .league * {
-    border: 1px solid #000;
+    border: 1px solid;
 }
 
 .league>thead {
-    border-bottom: 3px double #000;
+    border-bottom: 3px double;
 }
 
 .league>tbody>tr>th, .league>thead>tr>th:first-child {
-    border-right: 3px double #000;
+    border-right: 3px double;
     white-space: nowrap;
 }
 
